@@ -1,0 +1,28 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="dark">
+    <ion-title>
+      Tareas pendientes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium">
+ <!-- <ion-list color="medium">
+   <ion-item *ngFor='let lista of tareas' 
+              detail 
+              color="medium"
+              (click)="listaSeleccioanda(lista)">
+     <ion-label>{{lista.titulo}}</ion-label>
+     <ion-note color="success" slot="end">{{lista.items.length}} tareas </ion-note>
+   </ion-item>
+
+ </ion-list> -->
+ <app-listas [terminada]='false'></app-listas>
+
+ <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success" (click)='addTarea()'>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
